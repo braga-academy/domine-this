@@ -17,7 +17,7 @@ function Man(name, age){
     this.sexo = "Maculino"
 }
 
-Man.prototype = Person.prototype;
+Man.prototype = new Person();
 
 Man.prototype.walk = function(steps){
     this.steps = steps;
@@ -27,8 +27,10 @@ Man.prototype.walk = function(steps){
 const luciano = new Man("Luciano", 25);
 const bia = new Person("Bia", 2);
 
-luciano.walk(20);
-bia.walk(12);
+// luciano.walk(20);
+// bia.walk(12);
 
-console.log(luciano);
+console.log(luciano.age);
+delete luciano.age
+console.log(luciano.age);
 console.log(bia)
