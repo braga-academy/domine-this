@@ -25,3 +25,17 @@ console.log(dog.canineAge());
 person.speak('Hello Word!');
 dog.speak('Hello Word!');
 person.bark();
+
+/* -----------------------------------------
+* || exercise
+*  -----------------------------------------*/
+function add(a, b){
+    return a + b;
+}
+
+// console.log(add(10, 25))
+const add10 = add.bind(undefined, 10);
+const add99 = add.bind(undefined, 99);
+
+console.log(add10(25));
+console.log(add99(1));
