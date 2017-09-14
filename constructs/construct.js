@@ -12,7 +12,7 @@ function Pessoa(name, age) {
 }
 
 const luciano = new Pessoa("Luciano", 25)
-const bia = new Pessoa("Bia", 2)
+const bia = new Pessoa("Bia")
 
 console.log(luciano);
 console.log(bia);
