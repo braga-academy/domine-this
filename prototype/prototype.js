@@ -15,22 +15,28 @@ Person.prototype.olden = function(years){
 function Man(name, age){
     Person.call(this, name, age)
     this.sexo = "Maculino"
-}
+};
 
-Man.prototype = new Person();
+inherit(Man, Person);
 
 Man.prototype.walk = function(steps){
     this.steps = steps;
-    console.log(this.name + ' caminhou ' + this.steps + ' passos!')
+    console.log(this.name + ' caminhou ' + this.steps + ' passos!');
 };
 
 const luciano = new Man("Luciano", 25);
 const bia = new Person("Bia", 2);
 
-// luciano.walk(20);
-// bia.walk(12);
+luciano.walk(20);
 
 console.log(luciano.age);
 delete luciano.age
 console.log(luciano.age);
 console.log(bia)
+
+function inherit(filha, mae){
+    function p(){};
+
+    p.prototype = mae.prototype;
+    filha.prototype = new p();
+}
