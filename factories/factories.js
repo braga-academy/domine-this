@@ -14,12 +14,6 @@ Person.factory = function(name, age = 1){
     return new Person(name, age);
 }
 
-// function makePerson(name, age = 1){
-//     (age < 1 ? age =1 : age)
-//     return new Person(name, age);
-// }
-
-// const luciano = makePerson('Luciano');
 const luciano = Person.factory('Luciano');
 console.log(luciano);
 
